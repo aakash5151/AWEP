@@ -1,0 +1,17 @@
+.abc{
+
+    height:50vh;
+    background-color: red;
+    
+}
+.def{
+    height: 50vh;
+    background-color: yellow;
+}
+.ghi{
+    height:50vh;
+    background-color: blue;
+}
+body{
+    margin:0;
+}
