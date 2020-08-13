@@ -1,0 +1,120 @@
+<!-- Problem statement :
+
+Create LOGIN PAGE using flex with following details :
+
+1.Username Textbox
+2.Password Textbox
+3.Login Button
+4.Remember Me Checkbox
+5.Keep Me Signed In Checkbox
+
+Apply client-side validation on each field .
+
+Username field contains :
+
+numeric, alphanumeric, alphabets texts, no special characters except @.
+Length: min 3 characters max 12 characters
+
+Password field contains
+
+Alphanumeric, special characters except @.
+Length: min 5 characters max 12 characters
+
+If Username and Password is invalid don't allow to redirect to home page
+
+Show invalid Username and Password message
+
+After successful submission redirects the user to the home page.
+Display user name and password on the home page. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form login</title>
+    <script src="tarang.js"></script>
+    <style>
+        body {
+            font-size: 1.1rem;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+
+        .main-container {
+            border: 1 px solid black;
+
+            background: url(https://picsum.photos/id/100/900/500);
+            height: 450px;
+            width: 450px;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 5px solid maroon;
+            margin-left: 500px;
+            margin-top: 120px;
+        }
+
+        .inner-1 {
+            display: flex;
+            flex-direction: column;
+
+            padding: 5px;
+
+
+        }
+
+        button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 5px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input[type=text] {
+            padding: 3px;
+        }
+
+        input[type=password] {
+            padding: 3px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form action="" onsubmit="return validate(this)" method="POST">
+
+        <div class="main-container">
+            <div class="inner-1">
+                <center>
+                    <h3>LOGIN FORM</h3>
+                </center>
+                <label for="username">Username</label>
+                <input type="text" id="uname" name="uname" placeholder="Username" minlength="3" maxlength="12"
+                    pattern="[A-Za-z0-9]+"><br>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Password" minlength="5" maxlength="12"
+                    pattern="[A-Za-z0-9\d$!%*#?&]+
+                    "> <br>
+                <button onsubmit="validateForm()">Login</button><br>
+                <div style="display: flex;">
+                    <input type="checkbox" id="remember_me" name="remember_me" value="remember_me">
+                    <label for="remember_me">Remember Me </label><br>
+                </div>
+                <div style="display: flex;">
+                    <input type="checkbox" id="signed_in" name="signed_in" value="signed_in">
+                    <label for="signed_in">Keep Me Signed in </label><br>
+                </div>
+            </div>
+        </div>
+        <form>
+</body>
+
+</html>

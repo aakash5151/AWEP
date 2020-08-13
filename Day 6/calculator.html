@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="calculator.js"></script>
+</head>
+
+<body>
+    <div style="display: flex;flex-direction: column;width:50vw;margin: 5px;">
+        <input type="text" id="num1" placeholder="number1">
+        <input type="text" id="num2" placeholder="number2">
+        <input type="text" id="ans" placeholder="answer">
+    </div>
+    <div style="margin:5px">
+        <input type="button" value="+" id="add" onclick="compute_1()">
+        <input type="button" value="-" id="sub" onclick="compute_2()">
+        <input type="button" value="/" id="div" onclick="compute_3()">
+        <input type="button" value="*" id="mul" onclick="compute_4()">
+    </div>
+    <div>
+        <button onclick="compute()">submit</button>
+    </div>
+
+
+
+</body>
+
+</html>
