@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .myclass {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #id1 {
+            background: black;
+            color: white;
+            padding: 10px;
+            font-size: 2rem;
+            border-radius: 8px;
+        }
+
+        body {
+            margin: 0px;
+        }
+    </style>
+
+    <script>
+        function handleMouseOver() {
+
+            console.log("I have successfully called.");
+            var classElement = document.querySelector("div").children[0];
+            classElement.style.background = "yellow";
+            classElement.style.color = "black";
+
+            classElement.innerHTML = "Hello Class Selector";
+
+        }
+
+        function handleMouseOut() {
+
+            console.log("I have successfully called.");
+            var classElement = document.querySelector("div").children[0];
+            classElement.style.background = "black";
+            classElement.style.color = "white";
+
+            classElement.innerHTML = "Hello World";
+
+        }
+
+
+    </script>
+</head>
+
+<body>
+
+    <div class="myclass">
+        <div id="id1" onmouseover="handleMouseOver()" onmouseout="handleMouseOut()">
+            Hello World
+        </div>
+    </div>
+</body>
+
+</html>
